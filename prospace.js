@@ -9,6 +9,18 @@ const timeOut = driver.manage().setTimeouts({
 })
 const { site, textField, button } = require('./objects.json')
 
+
+function getScreenshot() {
+    const date = new Date();
+    let day = date.getDate();
+    let month = date.getMonth() + 1;
+    let year = date.getFullYear();
+    let currentDate = `${day}-${month}-${year}`;
+    const r = Math.floor(Math.random() * 1001)
+    driver.takeScreenshot().then(function(ss) {
+        fs.writeFileSync(`../${r+currentDate}.png`, ss, 'base64')
+    })
+}
 let openSite =
     driver.get(site);
 openSite
@@ -26,12 +38,11 @@ timeOut
             driver.findElement(swd.By.xpath(button)).click()
             timeOut
             sendInt.clear()
-
         }
     }, 3000)
     .catch(function(err) {
         console.log("Error ", err, " occurred!");
         console.log(`error at ${driver.getCurrentUrl}`);
-        driver.takeScreenshot()
+        getScreenshot()
         driver.close()
     })
