@@ -1,0 +1,6 @@
+{
+    "site" : "http://z29vzcbmaw5kaw5nigzvcib5b3u.prospace.io/",
+    "textField" : "/html/body/div[1]/div[1]/div/p[1]/input",
+    "button" : "/html/body/div[1]/div[1]/div/p[2]/button",
+    "result" : "/html/body/div[1]/div[2]/div/p"
+}
