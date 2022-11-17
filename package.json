@@ -2,8 +2,9 @@
   "dependencies": {
     "allure": "^0.0.0",
     "chromedriver": "^107.0.3",
+    "mochawesome": "^7.1.3",
     "selenium-webdriver": "^4.6.0"
-  } ,
+  },
   "scripts": {
     "postinstall": "selenium-standalone install",
     "pretest": "rm -rf allure-results",
