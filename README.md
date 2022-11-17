@@ -10,9 +10,3 @@ Next, you will need to install :
 then run : 
 `node prospace.js / or press F5 ontop of NodeJS in vscode`
 
-
-  - run: npm ci
-    - run: npm run build --if-present
-    - run: npm install selenium-webdriver
-    - run: npm install chromedriver
-    - run: node selenium-login.js
